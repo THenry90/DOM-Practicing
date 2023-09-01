@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Main Page for Dom manipulation</title>
+</head>
+<body>
+
+    <h1> Web Page for practicing with the DOM</h1>
+
+    <div class="main-container">
+
+        <h2>Input types</h2>
+        <div class="demo-container">
+            <h3>Number form</h3>
+            <form>
+                <label for="minutes">Minutes:</label><br>
+                <input type="number" id="minutes" min="0" max="59" step="1"><br>
+                <label for="seconds">Seconds:</label><br>
+                <input type="number" id="seconds" min="0" max="59" step="1">
+                <input type="submit" value="Submit">
+              </form>
+
+        </div>
+        <div class="demo-container">
+            <h3>Time picker</h3>
+
+            <input type="time" name="time" id="time" />
+            
+            
+        </div>
+
+        <div class="demo-container">
+            <h3>Week number</h3>
+
+            <input type="week" name="week" id="week"/>
+            
+            
+        </div>
+
+        <div class="demo-container">
+            <h3>Date picker</h3>
+
+            <input type="datetime-local">
+            
+            
+        </div>
+        
+        <div class="demo-container">
+            <h3>Colour Picker</h3>
+
+            <input type="color" name="color" id="color" />
+            
+            
+        </div>
+
+        <div class="demo-container">
+            <h3>Input Text</h3>
+
+            <textarea cols="30" rows="8"></textarea>
+            
+            
+        </div>
+
+    </div>
+    
+</body>
+<script src="./scripts/scripts.js"></script>
+</html>
