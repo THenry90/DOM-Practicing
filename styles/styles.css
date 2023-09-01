@@ -50,3 +50,7 @@ form {
     width: fit-content;
     text-align: center;
 }
+
+.selection-boxes {
+    gap:20px;
+}
