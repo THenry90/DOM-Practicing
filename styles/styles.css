@@ -1,3 +1,9 @@
+body{
+    display:flex;
+    flex-direction: column;
+}
+
+
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width:100%;
@@ -37,6 +43,16 @@ h2, h3 {
     margin:30px;
     padding:20px;
 
+}
+
+.combo-container {
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    border:1px solid rgba(121, 120, 120, 0.796);
+    border-radius:15px;
+    background-color: rgba(196, 194, 194, 0.72);
+    padding:30px;
 }
 
 form {

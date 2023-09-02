@@ -30,3 +30,42 @@ function handleSecondsInput() {
         secondsInput.value = 0; // If the value is greater than 59, reset to 0
     }
 }
+
+//Date in JS
+
+const date = new Date()
+
+
+let day = date.getDate()
+let month = date.getMonth() +1
+let year = date.getFullYear()
+
+
+let fullDate = `${day}-${month}-${year}`
+
+console.log(fullDate);
+console.log(date)
+
+//Current Time in JS
+
+function updateClock () {
+
+const currentTime = new Date();
+var resultElement = document.getElementById("clock")
+const hours = currentTime.getHours();
+const minutes = currentTime.getMinutes();
+const seconds = currentTime.getSeconds();
+const timeString = `${hours}:${minutes}:${seconds}`;
+
+var result = timeString;
+
+resultElement.innerHTML = result;
+
+//console.log(`Current time: ${hours}:${minutes}:${seconds}`);
+
+}
+//display Time
+
+
+setInterval(updateClock, 1000);
+updateClock();
