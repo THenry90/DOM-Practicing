@@ -28,6 +28,7 @@ h2, h3 {
     flex-wrap: wrap;
     background-color: rgba(240, 239, 239, 0.596);
     margin:30px;
+ 
 }
 
 .demo-container{
@@ -42,6 +43,7 @@ h2, h3 {
     background-color: rgba(240, 239, 239, 0.596);
     margin:30px;
     padding:20px;
+    gap:0.3em;
 
 }
 

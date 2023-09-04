@@ -64,8 +64,39 @@ resultElement.innerHTML = result;
 //console.log(`Current time: ${hours}:${minutes}:${seconds}`);
 
 }
-//display Time
+//update time every second
 
 
 setInterval(updateClock, 1000);
 updateClock();
+
+
+
+//Take time and put it on an array and display it
+
+// Initialize an empty array to store times
+const timeArray = [];
+
+// Function to get current time and add 25 minutes
+function addTime() {
+  const currentTime = new Date();
+  const newTime = new Date(currentTime.getTime() + 25 * 60000); // 25 minutes in milliseconds
+  timeArray.push(newTime);
+  displayTimes();
+}
+
+// Function to display the times in the array
+function displayTimes() {
+  const timeList = document.getElementById('timeList');
+  timeList.innerHTML = ''; // Clear previous entries
+
+  for (const time of timeArray) {
+    const listItem = document.createElement('li');
+    listItem.textContent = time.toLocaleTimeString();
+    timeList.appendChild(listItem);
+  }
+}
+
+// Add a click event listener to the button
+const addButton = document.getElementById('addButton');
+addButton.addEventListener('click', addTime);

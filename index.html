@@ -148,37 +148,266 @@
     </div>
 
     <div class="main-container">
-
         <h2>Time and Date display</h2>
-
         <div id="dateDisplay"></div>
         <div class="demo-container">
             <h3>Clock Display</h3>
-
-        <div id="clock"></div>
+            <div id="clock"></div>
         </div> 
-
+        <div class="demo-container">
+            <h3>Time added to an array</h3>
+            <button id="addButton">Add 25 Minutes</button>
+            <ul id="timeList"></ul>
+        </div>
     </div>
 
     <div class="main-container">
-
         <h2>Input combos</h2>
-
         <div class="demo-container">
             <h3>Text With tick box</h3>
-
             <div class="combo-container">
-
-            <textarea cols="30" rows="8"></textarea>
-            <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
-
+                <textarea cols="30" rows="8"></textarea>
+                <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
+            </div>
         </div>
-        </div>
-
-
-
-
     </div>
+
+    <div class="main-container">
+        <h2>Task Tracking prototype</h2>
+        <div class="demo-container">
+            <h3>Task Input</h3>
+
+            <textarea cols="20" rows="1" placeholder="Task Title"></textarea>
+            <textarea cols="30" rows="1" placeholder="Task Description"></textarea>
+
+            <input type="datetime-local">
+
+            <input type="datetime-local">
+
+            <select id="urgency" name="urgency">
+                <option>Very Urgent</option>
+                <option selected>Urgent</option>
+                <option>Not urgent</option>
+              </select>
+
+              <select id="importance" name="importance">
+                <option>Important</option>
+                <option selected>Not Important</option>
+              </select>
+
+              <select id="progress" name="progress">
+                <option selected>Not started</option>
+                <option>In progress</option>
+                <option>Done</option>
+              </select>
+
+              <div class="tags">Tags</div>
+              <div>Task ID</div>
+              <button type="submit">Submit this task</button>
+
+        </div>
+
+        <div class="demo-container">
+            <h3>Task Display</h3>
+
+            <textarea cols="20" rows="1" placeholder="Task Title"></textarea>
+            <textarea cols="30" rows="1" placeholder="Task Description"></textarea>
+
+            <div class="dateAdded">Date Task Added</div>
+            <div class="dateDue">Date Task Due</div>
+            <div class="urgency">Task Urgency</div>
+        
+
+            <select id="urgency" name="urgency">
+                <option>Very Urgent</option>
+                <option selected>Urgent</option>
+                <option>Not urgent</option>
+              </select>
+
+              <select id="importance" name="importance">
+                <option>Important</option>
+                <option selected>Not Important</option>
+              </select>
+
+              <select id="progress" name="progress">
+                <option selected>Not started</option>
+                <option>In progress</option>
+                <option>Done</option>
+              </select>
+
+              <div class="tags">Tags</div>
+              <div class="identifier">Task ID</div>
+              <progress max="100" value="75">75/100</progress>
+              <button type="submit">Edit this task</button>
+              <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
+
+        </div>
+
+        <div class="demo-container">
+            <h3>Task Edit</h3>
+
+            <textarea cols="20" rows="1" placeholder="Task Title"></textarea>
+            <textarea cols="30" rows="1" placeholder="Task Description"></textarea>
+
+            <div class="dateAdded">Date Task Added</div>
+            <div class="dateDue">Date Task Due</div>
+
+        
+
+            <select id="urgency" name="urgency">
+                <option>Very Urgent</option>
+                <option selected>Urgent</option>
+                <option>Not urgent</option>
+              </select>
+
+              <select id="importance" name="importance">
+                <option>Important</option>
+                <option selected>Not Important</option>
+              </select>
+
+              <select id="progress" name="progress">
+                <option selected>Not started</option>
+                <option>In progress</option>
+                <option>Done</option>
+              </select>
+
+              <div class="tags">Tags</div>
+              <div class="identifier">Task ID</div>
+              <progress max="100" value="75">75/100</progress>
+              <button type="submit">Edit this task</button>
+
+        </div>
+    </div>
+
+    <div class="main-container">
+        <h2>Task tracker planning</h2>
+        <div class="demo-container">
+            <h3>Task Information:</h3>
+            <ul>
+                <li>Title: A brief description of the task.</li>
+                <li>Description: Additional details or notes related to the task.</li>
+                <li>Due Date: The deadline or due date for completing the task.</li>
+                <li>Task Type: Indicate whether it's a routine task or a one-off task.</li>
+                <li>Urgency: A measure of how quickly the task needs to be addressed.</li>
+                <li>Importance: A measure of the task's significance or priority.</li>
+                <li>Status: Track whether the task is pending, completed, or in progress.</li>
+                <li>Tags or Labels: Allow users to categorize tasks (e.g., work, personal, errands).</li>
+                <li>Attachments: Enable users to attach relevant files or documents.</li>
+                <li>Unique User ID: use to identify individual tasks</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Task Prioritisation</h3>
+            <ul>
+                <li>Priority Score: Calculate a priority score for each task based on urgency, importance, and due date proximity.</li>
+                <li>Automatic Sorting: Sort tasks based on their priority scores for easy access.</li>
+                <li>Custom Sorting: Allow users to manually reorder tasks if needed.</li>
+         
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Task Filtering and Views</h3>
+            <ul>
+                <li>Filter by Date: Enable filtering by due date, including past due, today, this week, etc.</li>
+                <li>Filter by Priority: Let users filter tasks by urgency, importance, or custom criteria.</li>
+                <li>View Options: Provide different views like list view, calendar view, or Kanban board view.</li>
+                <li>Display / remove completed tasks</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Task Actions</h3>
+            <ul>
+                <li>Create Tasks: Allow users to add new tasks with all relevant information.</li>
+                <li>Edit Tasks: Provide the option to modify task details, including due dates and descriptions.</li>
+                <li>Mark as Complete: Allow users to mark tasks as completed.</li>
+                <li>Delete Tasks: Enable users to remove tasks they no longer need.</li>
+                <li>Duplicate Tasks: Allow for easy replication of similar tasks.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Reminders and Notifications:</h3>
+            <ul>
+                <li>Reminders: Send reminders to users before task due dates.</li>
+                <li>Notifications: Send notifications for important updates or approaching deadlines.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Considerations</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Considerations</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Considerations</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Considerations</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Considerations</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+
     
 </body>
 <script src="./scripts/scripts.js"></script>
