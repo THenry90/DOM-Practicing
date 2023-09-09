@@ -176,39 +176,38 @@
         <h2>Task Tracking prototype</h2>
         <div class="demo-container">
             <h3>Task Input</h3>
-
-            <textarea cols="20" rows="1" placeholder="Task Title"></textarea>
-            <textarea cols="30" rows="1" placeholder="Task Description"></textarea>
-
-            <input type="datetime-local">
-
-            <input type="datetime-local">
-
+        
+            <textarea id="taskTitle" cols="20" rows="1" placeholder="Task Title"></textarea>
+            <textarea id="taskDescription" cols="30" rows="1" placeholder="Task Description"></textarea>
+        
+            <input id="startDateTime" type="datetime-local">
+        
+            <input id="endDateTime" type="datetime-local">
+        
             <select id="urgency" name="urgency">
-                <option>Very Urgent</option>
-                <option selected>Urgent</option>
-                <option>Not urgent</option>
-              </select>
-
-              <select id="importance" name="importance">
-                <option>Important</option>
-                <option selected>Not Important</option>
-              </select>
-
-              <select id="progress" name="progress">
-                <option selected>Not started</option>
-                <option>In progress</option>
-                <option>Done</option>
-              </select>
-
-              <div class="tags">Tags</div>
-              <div>Task ID</div>
-              <button type="submit">Submit this task</button>
-
+                <option id="veryUrgent">Very Urgent</option>
+                <option id="urgent" selected>Urgent</option>
+                <option id="notUrgent">Not Urgent</option>
+            </select>
+        
+            <select id="importance" name="importance">
+                <option id="important">Important</option>
+                <option id="notImportant" selected>Not Important</option>
+            </select>
+        
+            <select id="progress" name="progress">
+                <option id="notStarted" selected>Not started</option>
+                <option id="inProgress">In progress</option>
+                <option id="done">Done</option>
+            </select>
+        
+            <div id="tags" class="tags">Tags</div>
+            <div id="taskID">Task ID</div>
+            <button id="submitTask" type="submit">Submit this task</button>
         </div>
 
         <div class="demo-container">
-            <h3>Task Display</h3>
+            <h3>Single Task Display</h3>
 
             <textarea cols="20" rows="1" placeholder="Task Title"></textarea>
             <textarea cols="30" rows="1" placeholder="Task Description"></textarea>
@@ -251,6 +250,7 @@
 
             <div class="dateAdded">Date Task Added</div>
             <div class="dateDue">Date Task Due</div>
+            <input type="datetime-local">
 
         
 
@@ -274,7 +274,7 @@
               <div class="tags">Tags</div>
               <div class="identifier">Task ID</div>
               <progress max="100" value="75">75/100</progress>
-              <button type="submit">Edit this task</button>
+              <button type="submit">resubmit task data</button>
 
         </div>
     </div>
@@ -337,10 +337,127 @@
         </div>
 
         <div class="demo-container">
-            <h3>Considerations</h3>
+            <h3>User Accounts and Synchronization</h3>
             <ul>
-                <li></li>
-                <li></li>
+                <li>User Profiles: Allow users to create accounts to save their tasks and preferences.</li>
+                <li>Synchronization: Enable data synchronization across devices if the app is available on multiple platforms.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Search Functionality:</h3>
+            <ul>
+                <li>Search Bar: Include a search bar to find specific tasks quickly.</li>
+        
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Customisation</h3>
+            <ul>
+                <li>Theme Customization: Let users choose themes or color schemes.</li>
+                <li>Task Categories: Allow users to create custom categories or labels for tasks.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Data Export and Import:</h3>
+            <ul>
+                <li>Export: Allow users to export task data for backup or analysis.</li>
+                <li>Import: Support importing tasks from other task management apps or file formats.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Collaboration (if applicable):</h3>
+            <ul>
+                <li>Shared Tasks: Enable users to collaborate on tasks with others.</li>
+                <li>Task Comments: Add comments or discussion threads for tasks.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Analytics and Insights:</h3>
+            <ul>
+                <li>Task History: Provide task completion history and statistics.</li>
+                <li>Productivity Insights: Offer insights into task completion trends and patterns.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Accessibility and Usability</h3>
+            <ul>
+                <li>Ensure the app is accessible to all users, including those with disabilities.</li>
+                <li>Implement a clean and intuitive user interface.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Security and Privacy</h3>
+            <ul>
+                <li>Ensure user data is secure and privacy is maintained, especially if there's user account functionality.</li>
+                <li>Task Comments: Add comments or discussion threads for tasks.</li>
+
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Feedback and Support</h3>
+            <ul>
+                <li>Provide a way for users to give feedback or seek support if they encounter issues.
+                </li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Offline Functionality:</h3>
+            <ul>
+                <li>Consider allowing users to access and work on tasks even when they're offline.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Backup and Restore:</h3>
+            <ul>
+                <li>Allow users to back up their task data and restore it if needed.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Cross-Platform Compatibility:</h3>
+            <ul>
+                <li>Ensure your app works on different devices and operating systems.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>User Onboarding:</h3>
+            <ul>
+                <li>Create a simple and effective onboarding process for new users to get started with the app.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Help and Documentation:</h3>
+            <ul>
+                <li>Offer user guides or FAQs to assist users in using the app effectively.
+                </li>
+                <li>Task Comments: Add comments or discussion threads for tasks.</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Continuous Improvement:</h3>
+            <ul>
+                <li>Gather user feedback and regularly update the app to improve functionality and user experience.</li>
+
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <h3>Title</h3>
+            <ul>
+                
                 <li></li>
                 <li></li>
                 <li></li>
@@ -350,60 +467,60 @@
             </ul>
         </div>
 
-        <div class="demo-container">
-            <h3>Considerations</h3>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
+      
+   
+    </div>
+    <!--
+
+    <div class="main-container">
+        <h2>Function for taking a button click date and displaying it</h2>
 
         <div class="demo-container">
-            <h3>Considerations</h3>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
 
-        <div class="demo-container">
-            <h3>Considerations</h3>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
+            <button id="startTaskButton">Start Task</button>
+            <div id="taskInfo" style="display: none;">
+                <p>Date started: <span id="startDate"></span></p>
+                <p>Due date: <input type="date" id="dueDateInput"></p>
+                <p id="taskStatus"></p>
+            </div>
 
+        </div>
+    </div>
+
+    -->
+
+   <!-- <div class="main-container">
+        <h2>Newer date function</h2>
         <div class="demo-container">
-            <h3>Considerations</h3>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+
+            <button id="startTaskButton">Start Task</button>
+            <div id="taskInfo" style="display: none;">
+                <p>Date Started: <span id="startDate"></span></p>
+                <p>Due Date: <span id="dueDate"></span></p>
+                <p>Due Time: <span id="dueTime"></span></p>
+                <p>Time until/Time passed Due Date: <span id="taskStatus"></span></p>
+            </div>
+        </div>
+    </div> 
+    
+    -->
+
+
+    <div class="main-container">
+        <h2>Latest prototype</h2>
+        <div class="demo-container">
+            <div class="calculator-container">
+                <label for="dueDate">When is your task due?</label>
+                <input type="date" id="dueDate" required>
+                <input type="time" id="dueTime" required>
+                <button id="confirm">Confirm</button>
+            </div>
+            <div id="taskInfo" style="display: none;">
+                <p>Task Start Date: <span id="startDate"></span></p>
+                <p>Task Due Date: <span id="selectedDueDate"></span></p>
+                <p id="timeDifference"></p>
+            </div>
+
         </div>
     </div>
 
@@ -411,4 +528,7 @@
     
 </body>
 <script src="./scripts/scripts.js"></script>
+<script src="./scripts/dateDisplay.js"></script>
+<script src="./scripts/dateCalculator2.js"></script>
+<script src="./scripts/dateCalculator3.js"></script>
 </html>
